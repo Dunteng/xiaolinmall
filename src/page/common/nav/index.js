@@ -24,7 +24,7 @@ var nav = {
         // 退出点击事件
         $('.js-logout').click(function () {
             _user.logout(function (res) {
-                window.location.reload();
+                window.location.href = './index.html';
             }, function (errMsg) {
                 _mm.errorTips(errMsg);
             });
