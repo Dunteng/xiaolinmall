@@ -10,7 +10,7 @@ var getHtmlConfig = function (name, title) {
     return {
         template: './src/view/' + name + '.html',
         filename: 'view/' + name + '.html',
-        // favicon: './favicon.ico',
+        favicon: './favicon.ico',
         title: title,
         inject: true,
         hash: true,
@@ -36,11 +36,12 @@ var config = {
         'user-center-update': ['./src/page/user-center-update/index.js'],
         'user-pass-update': ['./src/page/user-pass-update/index.js'],
         'result': ['./src/page/result/index.js'],
-        // 'about': ['./src/page/about/index.js'],
+        'about': ['./src/page/about/index.js'],
     },
     output: {
         path: __dirname + '/dist/',
-        publicPath: 'dev' === WEBPACK_ENV ? '/dist/' : '//s.happymmall.com/mmall-fe/dist/',
+        // publicPath: 'dev' === WEBPACK_ENV ? '/dist/' : '//s.happymmall.com/mmall-fe/dist/',
+        publicPath: '/dist/',
         filename: 'js/[name].js'
     },
     externals: {
@@ -93,7 +94,7 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('user-center-update', '修改个人信息')),
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-update', '修改密码')),
         new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果')),
-        // new HtmlWebpackPlugin(getHtmlConfig('about', '关于MMall')),
+        new HtmlWebpackPlugin(getHtmlConfig('about', '关于Dunteng Mall')),
     ],
     devServer: {
         port: 8088,

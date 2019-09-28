@@ -5,7 +5,7 @@ var _address = {
     // 获取地址列表
     getAddressList: function (resolve, reject) {
         _mm.request({
-            url: _mm.getServerUrl('/shipping/list.do'),
+            url: _mm.getServerUrl('http://test.happymmall.com/shipping/list.do'),
             data: {
                 pageSize: 50
             },
@@ -16,7 +16,7 @@ var _address = {
     // 新建收件人
     save: function (addressInfo, resolve, reject) {
         _mm.request({
-            url: _mm.getServerUrl('/shipping/add.do'),
+            url: _mm.getServerUrl('http://test.happymmall.com/shipping/add.do'),
             data: addressInfo,
             success: resolve,
             error: reject
@@ -25,7 +25,7 @@ var _address = {
     // 更新收件人
     update: function (addressInfo, resolve, reject) {
         _mm.request({
-            url: _mm.getServerUrl('/shipping/update.do'),
+            url: _mm.getServerUrl('http://test.happymmall.com/shipping/update.do'),
             data: addressInfo,
             success: resolve,
             error: reject
@@ -34,7 +34,7 @@ var _address = {
     // 删除收件人
     deleteAddress: function (shippingId, resolve, reject) {
         _mm.request({
-            url: _mm.getServerUrl('/shipping/del.do'),
+            url: _mm.getServerUrl('http://test.happymmall.com/shipping/del.do'),
             data: {
                 shippingId: shippingId
             },
@@ -45,7 +45,7 @@ var _address = {
     // 获取单条收件人信息
     getAddress: function (shippingId, resolve, reject) {
         _mm.request({
-            url: _mm.getServerUrl('/shipping/select.do'),
+            url: _mm.getServerUrl('http://test.happymmall.com/shipping/select.do'),
             data: {
                 shippingId: shippingId
             },

@@ -6,7 +6,7 @@ var _user = {
     // 用户登录
     login: function (userInfo, resolve, reject) {
         _mm.request({
-            url: _mm.getServerUrl('/user/login.do'),
+            url: _mm.getServerUrl('http://test.happymmall.com/user/login.do'),
             data: userInfo,
             method: 'POST',
             success: resolve,
@@ -16,7 +16,7 @@ var _user = {
     // 检查用户名
     checkUsername: function (username, resolve, reject) {
         _mm.request({
-            url: _mm.getServerUrl('/user/check_valid.do'),
+            url: _mm.getServerUrl('http://test.happymmall.com/user/check_valid.do'),
             data: {
                 type: 'username',
                 str: username
@@ -29,7 +29,7 @@ var _user = {
     // 用户注册
     register: function (userInfo, resolve, reject) {
         _mm.request({
-            url: _mm.getServerUrl('/user/register.do'),
+            url: _mm.getServerUrl('http://test.happymmall.com/user/register.do'),
             data: userInfo,
             method: 'POST',
             success: resolve,
@@ -39,7 +39,7 @@ var _user = {
     // 检查登录状态
     checkLogin: function (resolve, reject) {
         _mm.request({
-            url: _mm.getServerUrl('/user/get_user_info.do'),
+            url: _mm.getServerUrl('http://test.happymmall.com/user/get_user_info.do'),
             method: 'POST',
             success: resolve,
             error: reject
@@ -48,7 +48,7 @@ var _user = {
     // 获取用户密码提示问题
     getQuestion: function (username, resolve, reject) {
         _mm.request({
-            url: _mm.getServerUrl('/user/forget_get_question.do'),
+            url: _mm.getServerUrl('http://test.happymmall.com/user/forget_get_question.do'),
             data: {
                 username: username
             },
@@ -60,7 +60,7 @@ var _user = {
     // 检查密码提示问题答案
     checkAnswer: function (userInfo, resolve, reject) {
         _mm.request({
-            url: _mm.getServerUrl('/user/forget_check_answer.do'),
+            url: _mm.getServerUrl('http://test.happymmall.com/user/forget_check_answer.do'),
             data: userInfo,
             method: 'POST',
             success: resolve,
@@ -70,7 +70,7 @@ var _user = {
     // 重置密码
     resetPassword: function (userInfo, resolve, reject) {
         _mm.request({
-            url: _mm.getServerUrl('/user/forget_reset_password.do'),
+            url: _mm.getServerUrl('http://test.happymmall.com/user/forget_reset_password.do'),
             data: userInfo,
             method: 'POST',
             success: resolve,
@@ -80,7 +80,7 @@ var _user = {
     // 获取用户信息
     getUserInfo: function (resolve, reject) {
         _mm.request({
-            url: _mm.getServerUrl('/user/get_information.do'),
+            url: _mm.getServerUrl('http://test.happymmall.com/user/get_information.do'),
             method: 'POST',
             success: resolve,
             error: reject
@@ -89,7 +89,7 @@ var _user = {
     // 更新个人信息
     updateUserInfo: function (userInfo, resolve, reject) {
         _mm.request({
-            url: _mm.getServerUrl('/user/update_information.do'),
+            url: _mm.getServerUrl('http://test.happymmall.com/user/update_information.do'),
             data: userInfo,
             method: 'POST',
             success: resolve,
@@ -99,7 +99,7 @@ var _user = {
     // 登录状态下更新密码
     updatePassword: function (userInfo, resolve, reject) {
         _mm.request({
-            url: _mm.getServerUrl('/user/reset_password.do'),
+            url: _mm.getServerUrl('http://test.happymmall.com/user/reset_password.do'),
             data: userInfo,
             method: 'POST',
             success: resolve,
@@ -109,7 +109,7 @@ var _user = {
     // 登出
     logout: function (resolve, reject) {
         _mm.request({
-            url: _mm.getServerUrl('/user/logout.do'),
+            url: _mm.getServerUrl('http://test.happymmall.com/user/logout.do'),
             method: 'POST',
             success: resolve,
             error: reject

@@ -5,7 +5,7 @@ var _payment = {
     // 获取支付信息
     getPaymentInfo: function (orderNumber, resolve, reject) {
         _mm.request({
-            url: _mm.getServerUrl('/order/pay.do'),
+            url: _mm.getServerUrl('http://test.happymmall.com/order/pay.do'),
             data: {
                 orderNo: orderNumber
             },
@@ -16,7 +16,7 @@ var _payment = {
     // 获取订单状态
     getPaymentStatus: function (orderNumber, resolve, reject) {
         _mm.request({
-            url: _mm.getServerUrl('/order/query_order_pay_status.do'),
+            url: _mm.getServerUrl('http://test.happymmall.com/order/query_order_pay_status.do'),
             data: {
                 orderNo: orderNumber
             },
